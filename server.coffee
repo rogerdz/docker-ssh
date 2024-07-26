@@ -29,7 +29,9 @@ exitOnConfigError 'No AUTH_MECHANISM specified'               unless authMechani
 exitOnConfigError "Unknown AUTH_MECHANISM: #{authMechanism}"  unless authenticationHandler
 
 options =
-  privateKey: fs.readFileSync keypath
+  {                                                                                         
+    hostKeys: [fs.readFileSync(keypath)]                                                    
+  }
 
 sessionFactory = handlerFactory container, shell
 
