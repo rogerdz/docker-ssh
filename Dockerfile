@@ -1,5 +1,5 @@
 #FROM gliderlabs/alpine
-FROM mhart/alpine-node:14
+FROM node:14-alpine
 
 WORKDIR /src
 ADD . .
