@@ -7,3 +7,6 @@ run-dev.sh
 *.md
 Makefile
 id_rsa.pub
+Dockerfile
+LICENSE
+example_*
